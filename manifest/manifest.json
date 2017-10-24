@@ -7,7 +7,7 @@
   "theme_color":"#aeaeae",
   "icons": [
     {
-      "src":"check-512.png",
+      "src":"/images/check-512.png",
       "sizes":"512x512",
       "type":"image/png"
     }]
