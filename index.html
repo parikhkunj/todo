@@ -42,7 +42,19 @@
 	</div>
 	<nav class="navbar navbar-inverse navbar-fixed-bottom"> <!-- add "visible-xs" to class-->
 		<div class="container-fluid">
-			<button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#addModalBox" onclick="addBoxInitializer()">ADD TASK</button>
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"></a>
+				<button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#addModalBox" onclick="addBoxInitializer()">ADD TASK</button>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNAV">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="myNAV">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="https://github.com/parikhkunj/todo" role="button">View Source</a></li>
+				</ul>
+			</div>
 		</div>
 	</nav>
 
@@ -113,6 +125,7 @@
 			</div>
 		</div>
 	</div>
+<!--Jvascript with offline local database storing functionality, custom made for this app-->
 <script type="text/javascript" src="todos.js"></script>
 </body>
 </html>
