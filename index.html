@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>To-Do</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Playfair+Display|Lobster" rel="stylesheet">
+  </head>
+<body>
+	<style type="text/css">
+		.custom-fonts {
+			font-family: 'Abril Fatface','Times New Roman',normal;
+		}
+	</style>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4 col-sm-push-4">
+				<h1 class="custom-fonts">Ongoing</h1>
+				<ul class="list-group" id="ongoingList"></ul>
+			</div>
+			<div class="col-sm-4 col-sm-pull-4">
+				<h1 class="custom-fonts">To-Do</h1>
+				<ul class="list-group" id="todoList"></ul>
+			</div>
+			<div class="col-sm-4">
+				<h1 class="custom-fonts">Done</h1>
+				<ul class="list-group" id="doneList"></ul>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div>
+			<br>
+			<br>
+			<br>
+		</div>
+	</div>
+	<nav class="navbar navbar-inverse navbar-fixed-bottom"> <!-- add "visible-xs" to class-->
+		<div class="container-fluid">
+			<button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#addModalBox" onclick="addBoxInitializer()">ADD TASK</button>
+		</div>
+	</nav>
+
+	<div id="taskDetailsModal" class="modal fade" role="dialog"> 
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title text-center" id="taskDetailsModalTitle"></h4>
+				</div>
+				<div class="modal-body">
+					<p class="text-default" id="taskDetailsModalDescription"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-warning" data-dismiss="modal" id="taskDetailsModalButtonP"></button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal" id="taskDetailsModalButtonN"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Add task Modal-->
+	<div id="addModalBox" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Add Task</h4>
+					</div>
+					<div class="modal-body">
+						<!--HERE Comes the input box and description box with logic-->
+							<form id="taskForm">
+								<div class="form-group">
+									<label for="taskText">Task:</label>
+									<input type="text" autofocus class="form-control" placeholder="Enter task..." id="taskText">
+								</div>
+								<a href="#taskDescriptionBox" data-toggle="collapse">Add description</a>
+								<div class="form-group collapse" id="taskDescriptionBox">
+									<label for="taskDescription">Description:</label>
+									<textarea class="form-control" placeholder="Enter task description" rows="5" id="taskDescription"></textarea>
+								</div> 
+								<div class="hidden">
+									<p id="taskPriority">0</p>
+								</div>
+							</form>
+					</div>
+					<div class="modal-footer">
+						<div class="dropup pull-left">
+							<button id="taskPriorityButton" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Add Priority</span></button>
+							<ul id="priorityAvailable" class="dropdown-menu list-inline" role="menu">
+								<li ><a onclick="setPriority(1)" href="#">1</a></li>
+								<li ><a onclick="setPriority(2)" href="#">2</a></li>
+								<li ><a onclick="setPriority(3)" href="#">3</a></li>
+								<li ><a onclick="setPriority(4)" href="#">4</a></li>
+								<li ><a onclick="setPriority(5)" href="#">5</a></li>
+								<li ><a onclick="setPriority(6)" href="#">6</a></li>
+								<li ><a onclick="setPriority(7)" href="#">7</a></li>
+								<li ><a onclick="setPriority(8)" href="#">8</a></li>
+								<li ><a onclick="setPriority(9)" href="#">9</a></li>
+								<li ><a onclick="setPriority(10)"  href="#">10</a></li>
+							</ul>
+						</div><!--_<span class="badge">5</span>-->
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="addTask()">Add</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="todos.js"></script>
+</body>
+</html>
+<!--
+<div class="collapse" id="prioritySelector">
+								<button class="btn btn-info" id="priorityButton1" onclick="setPriority(1)">1</button>
+								<button class="btn btn-info" id="priorityButton2" onclick="setPriority(2)">2</button>
+								<button class="btn btn-info" id="priorityButton3" onclick="setPriority(3)">3</button>
+								<button class="btn btn-info" id="priorityButton4" onclick="setPriority(4)">4</button>
+								<button class="btn btn-info" id="priorityButton5" onclick="setPriority(5)">5</button>
+								<button class="btn btn-info" id="priorityButton6" onclick="setPriority(6)">6</button>
+								<button class="btn btn-info" id="priorityButton7" onclick="setPriority(7)">7</button>
+								<button class="btn btn-info" id="priorityButton8" onclick="setPriority(8)">8</button>
+								<button class="btn btn-info" id="priorityButton9" onclick="setPriority(9)">9</button>
+								<button class="btn btn-info" id="priorityButton10" onclick="setPriority(10)">10</button>
+							</div>
+-->
