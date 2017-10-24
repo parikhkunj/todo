@@ -1,0 +1,1 @@
+This is my take on Progressive Web App with a simple mobile first TO-DO app
