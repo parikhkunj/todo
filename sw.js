@@ -9,8 +9,8 @@ const RUNTIME = 'todoruntime';
 const PRECACHE_URLS = [
   'index.html',
   './', // Alias for index.html
-  '/todos.js',
-  '/check-512.png',
+  'script/todos.js',
+  'images/check-512.png',
   '/sw.js'
 ];
 
