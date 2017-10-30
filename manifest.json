@@ -9,7 +9,7 @@
   "description":"My mobile first web app capable TODO app",
   "icons": [
     {
-      "src":"mages/c512.png",
+      "src":"images/c512.png",
       "sizes":"512x512",
       "type":"image/png"
     },
