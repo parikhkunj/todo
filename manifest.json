@@ -8,37 +8,37 @@
   "description":"My mobile first web app capable TODO app",
   "icons": [
     {
-      "src":"/images/c512.png",
+      "src":"/mages/c512.png",
       "sizes":"512x512",
       "type":"image/png"
     },
     {
-      "src":"/images/c192.png",
+      "src":"images/c192.png",
       "sizes":"192x192",
       "type":"image/png"
     },
     {
-      "src":"/images/c168.png",
+      "src":"images/c168.png",
       "sizes":"168x168",
       "type":"image/png"
     },
     {
-      "src":"/images/c144.png",
+      "src":"images/c144.png",
       "sizes":"144x144",
       "type":"image/png"
     },
     {
-      "src":"/images/c96.png",
+      "src":"images/c96.png",
       "sizes":"96x96",
       "type":"image/png"
     },
     {
-      "src":"/images/c72.png",
+      "src":"images/c72.png",
       "sizes":"72x72",
       "type":"image/png"
     },
     {
-      "src":"/images/c48.png",
+      "src":"images/c48.png",
       "sizes":"48x48",
       "type":"image/png"
     }
