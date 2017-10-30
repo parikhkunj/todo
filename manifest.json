@@ -2,13 +2,14 @@
   "name": "Todo",
   "short_name": "Todo",
   "start_url":".",
+  "orientation":"portrait",
   "display":"standalone",
   "background_color":"#fefefe",
   "theme_color":"#aeaeae",
   "description":"My mobile first web app capable TODO app",
   "icons": [
     {
-      "src":"/mages/c512.png",
+      "src":"mages/c512.png",
       "sizes":"512x512",
       "type":"image/png"
     },
