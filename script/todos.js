@@ -1,4 +1,4 @@
-if ('serviceWorker' in navigator) {
+/*if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
       // Registration was successful
@@ -9,7 +9,7 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-
+*/
 $(document).keypress(function(e) {
   if(e.which == 13) {
     $("#addModalBox").modal();
